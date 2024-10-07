@@ -1,0 +1,1626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="login rep3">
+      <stringProp name="TestPlan.comments">This test plan was created by the BlazeMeter converter v.${project.version}. Please contact support@blazemeter.com for further support.</stringProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="sec-ch-ua" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua</stringProp>
+            <stringProp name="Header.value">&quot;Chromium&quot;;v=&quot;128&quot;, &quot;Not;A=Brand&quot;;v=&quot;24&quot;, &quot;Google Chrome&quot;;v=&quot;128&quot;</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-mobile" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+            <stringProp name="Header.value">?0</stringProp>
+          </elementProp>
+          <elementProp name="sec-ch-ua-platform" elementType="Header">
+            <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+            <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+          </elementProp>
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BASE_URL_1" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_1</stringProp>
+            <stringProp name="Argument.value">browser.pipe.aria.microsoft.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_2" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_2</stringProp>
+            <stringProp name="Argument.value">uat-ssppcores.pp.zebra.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="BASE_URL_3" elementType="Argument">
+            <stringProp name="Argument.name">BASE_URL_3</stringProp>
+            <stringProp name="Argument.value">zac-idp1.sync.zebra.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.implementation"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <DNSCacheManager guiclass="DNSCachePanel" testclass="DNSCacheManager" testname="DNS Cache Manager" enabled="true">
+        <collectionProp name="DNSCacheManager.servers"/>
+        <collectionProp name="DNSCacheManager.hosts"/>
+        <boolProp name="DNSCacheManager.clearEachIteration">true</boolProp>
+        <boolProp name="DNSCacheManager.isCustomResolver">false</boolProp>
+      </DNSCacheManager>
+      <hashTree/>
+      <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
+        <collectionProp name="AuthManager.auth_list"/>
+        <boolProp name="AuthManager.controlledByThreadGroup">false</boolProp>
+      </AuthManager>
+      <hashTree/>
+      <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+        <collectionProp name="CookieManager.cookies"/>
+        <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+        <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
+      </CookieManager>
+      <hashTree/>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+        <boolProp name="clearEachIteration">true</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+        <boolProp name="CacheManager.controlledByThread">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <stringProp name="delimiter">,</stringProp>
+        <stringProp name="fileEncoding"></stringProp>
+        <stringProp name="filename">testdata.txt</stringProp>
+        <boolProp name="ignoreFirstLine">false</boolProp>
+        <boolProp name="quotedData">false</boolProp>
+        <boolProp name="recycle">true</boolProp>
+        <stringProp name="shareMode">shareMode.all</stringProp>
+        <boolProp name="stopThread">false</boolProp>
+        <stringProp name="variableNames">Uselogin</stringProp>
+      </CSVDataSet>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <intProp name="ThreadGroup.num_threads">1000</intProp>
+        <intProp name="ThreadGroup.ramp_time">100</intProp>
+        <longProp name="ThreadGroup.duration">900</longProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <intProp name="LoopController.loops">-1</intProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T01_Launch to the application">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://browser.pipe.aria.microsoft.com/Collector/3.0/?qsp=true&amp;content-type=application%2Fbond-compact-binary&amp;client-id=NO_AUTH&amp;sdk-version=AWT-Web-JS-1.8.6&amp;x-apikey=a387cfcf60114a43a7699f9fbb49289e-9bceb9fe-1c06-460f-96c5-6a0b247358bc-7238,bc3902d8132f43e3ae086a009979fa88-632130b2-9455-44a6-80e2-d7457b6eb8ca-7193&amp;client-time-epoch-millis=1726802412531&amp;time-delta-to-apply-millis=1043" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_1}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">Collector/3.0/</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="sdk-version" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">sdk-version</stringProp>
+                  <stringProp name="Argument.value">AWT-Web-JS-1.8.6</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="client-time-epoch-millis" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">client-time-epoch-millis</stringProp>
+                  <stringProp name="Argument.value">1726802412531</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="time-delta-to-apply-millis" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">time-delta-to-apply-millis</stringProp>
+                  <stringProp name="Argument.value">1043</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">content-type</stringProp>
+                  <stringProp name="Argument.value">application/bond-compact-binary</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="client-id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">client-id</stringProp>
+                  <stringProp name="Argument.value">NO_AUTH</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="x-apikey" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">x-apikey</stringProp>
+                  <stringProp name="Argument.value">a387cfcf60114a43a7699f9fbb49289e-9bceb9fe-1c06-460f-96c5-6a0b247358bc-7238,bc3902d8132f43e3ae086a009979fa88-632130b2-9455-44a6-80e2-d7457b6eb8ca-7193</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="qsp" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">qsp</stringProp>
+                  <stringProp name="Argument.value">true</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="m&#x9;&#xb;&#x2;Ja387cfcf60114a43a7699f9fbb49289e-9bceb9fe-1c06-460f-96c5-6a0b247358bc-7238&#xa;&#x1;I&#x12;act_default_source©$b0029ae3-1901-4ac8-b4f3-2fa071a88345Ñ&#x6;æ&#x8f;&#x8e;×ÁdË&#x8;&#xa;&#x1;)$d5e1aacc-2d2d-4c21-bfad-8b6c573cddc6qæ&#x8f;&#x8e;×Ád©&#x6;customÉ&#x6;&#x9;awt_statsÍ&#xd;&#x9;&#x9;&#x1b;&#x8;TenantId bc3902d8132f43e3ae086a009979fa88&#x16;records_received_count&#x2;11&#x12;records_sent_count&#x1;9&#x10;AppInfo.Language&#x5;en-US&#x11;UserInfo.Language&#x5;en-US&#x11;UserInfo.TimeZone&#x6; 05:30&#x16;DeviceInfo.BrowserName&#x6;Chrome&#x19;DeviceInfo.BrowserVersion&#x9;128.0.0.0&#x11;DeviceInfo.OsName&#x7;Windows&#x14;DeviceInfo.OsVersion&#x6;15.0.0&#xd;DeviceInfo.Id$85b7b305-0da3-416b-9f5f-231b9583eae8&#x11;launcherStartTime7Fri Sep 20 2024 08:49:54 GMT 0530 (India Standard Time)&#x9;userAgentoMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36&#xb;environment&#x4;prod&#xf;launcherVersion&#x15;LauncherV2-2024072401&#x5;flags&#x9a;&#x3;{&quot;enableBranding&quot;:true,&quot;brandingWithImages&quot;:true,&quot;enableT21WebRedirect&quot;:true,&quot;lightMeetingsBuildVersion&quot;:24082621000,&quot;lightMeetingsWebBuildVersion&quot;:24091020300,&quot;enablePDSRedirect&quot;:true,&quot;enableLimeRedirectFromWebjoin&quot;:true,&quot;enableLimeRedirectForMeetingId&quot;:true,&quot;enableLimeRedirectFromUnsupportedOS&quot;:false,&quot;enableLimeRedirectForFirefox&quot;:false,&quot;enableLimeRedirectForSafari&quot;:false,&quot;enableAnonymousReporting&quot;:false}&#x11;launcherSessionId 76da11b135e4205ed4e3661e1c242a96&#x10;serverDeeplinkId$667878ea-52cc-4195-b90c-dfe2cd61f217&#xa;deeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;webDeeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;UserInfo.Ring&#x7;general&#x11;clientEnvironment&#x4;prod&#x10;EventInfo.InitId$8ffe4a6a-6bad-46fd-bff3-c8da8bd5d8f6&#x12;EventInfo.Sequence&#x1;1&#x14;EventInfo.SdkVersion&#x10;AWT-Web-JS-1.8.6&#xe;EventInfo.Name&#x9;awt_stats&#xe;EventInfo.Time&#x18;2024-09-20T03:20:12.531ZÍ&#x1f;&#x9;&#x2;&#x2;&#xe;suppressPrompt&#x0;&#xd;promptSuccess&#x0;&#x0;&#x0;Jbc3902d8132f43e3ae086a009979fa88-632130b2-9455-44a6-80e2-d7457b6eb8ca-7193&#xa;&#x1;I&#x12;act_default_source©$23098fe0-6245-44f9-9a69-90d06d2968b1Ñ&#x6;æ&#x8f;&#x8e;×ÁdË&#x8;&#xa;&#x2;)$54fa9289-5da7-49b8-ad59-ef57fac4eb27qæ&#x8f;&#x8e;×Ád©&#x7;sessionÉ&#x6;&#x7;sessionÍ&#xd;&#x9;&#x9;&#x1d;&#xa;Session.Id$9c0ecca1-bca6-491b-b1c5-e8f75bcee798&#xd;Session.State&#x5;Ended&#x10;Session.Duration&#x2;17&#x16;Session.DurationBucket&#x9;UpTo30Sec&#x17;Session.FirstLaunchTime&#x18;2024-04-04T12:08:55.420Z&#x10;AppInfo.Language&#x5;en-US&#x11;UserInfo.Language&#x5;en-US&#x11;UserInfo.TimeZone&#x6; 05:30&#x16;DeviceInfo.BrowserName&#x6;Chrome&#x19;DeviceInfo.BrowserVersion&#x9;128.0.0.0&#x11;DeviceInfo.OsName&#x7;Windows&#x14;DeviceInfo.OsVersion&#x6;15.0.0&#xd;DeviceInfo.Id$85b7b305-0da3-416b-9f5f-231b9583eae8&#x11;launcherStartTime7Fri Sep 20 2024 08:49:54 GMT 0530 (India Standard Time)&#x9;userAgentoMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36&#xb;environment&#x4;prod&#xf;launcherVersion&#x15;LauncherV2-2024072401&#x5;flags&#x9a;&#x3;{&quot;enableBranding&quot;:true,&quot;brandingWithImages&quot;:true,&quot;enableT21WebRedirect&quot;:true,&quot;lightMeetingsBuildVersion&quot;:24082621000,&quot;lightMeetingsWebBuildVersion&quot;:24091020300,&quot;enablePDSRedirect&quot;:true,&quot;enableLimeRedirectFromWebjoin&quot;:true,&quot;enableLimeRedirectForMeetingId&quot;:true,&quot;enableLimeRedirectFromUnsupportedOS&quot;:false,&quot;enableLimeRedirectForFirefox&quot;:false,&quot;enableLimeRedirectForSafari&quot;:false,&quot;enableAnonymousReporting&quot;:false}&#x11;launcherSessionId 76da11b135e4205ed4e3661e1c242a96&#x10;serverDeeplinkId$667878ea-52cc-4195-b90c-dfe2cd61f217&#xa;deeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;webDeeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;UserInfo.Ring&#x7;general&#x11;clientEnvironment&#x4;prod&#x10;EventInfo.InitId$cbe8afb1-09ba-4e01-9d9b-ae478979eb7c&#x12;EventInfo.Sequence&#x2;11&#x14;EventInfo.SdkVersion&#x10;AWT-Web-JS-1.8.6&#xe;EventInfo.Name&#x7;session&#xe;EventInfo.Time&#x18;2024-09-20T03:20:12.531ZÍ&#x1f;&#x9;&#x2;&#x2;&#xe;suppressPrompt&#x0;&#xd;promptSuccess&#x0;&#x0;)$a95b242b-84a8-407d-8452-7bbbc8580d45qä&#x8f;&#x8e;×Ád©&#x8;launcherÉ&#x6;&#x8;trackingÍ&#xd;&#x9;&#x9;&#x1c;&#xa;actionName&#x16;launcher_page_unloaded&#x10;screenResolution&#x8;1536x864&#xc;deeplinkType&#x7;message&#xa;Session.Id$9c0ecca1-bca6-491b-b1c5-e8f75bcee798&#x10;AppInfo.Language&#x5;en-US&#x11;UserInfo.Language&#x5;en-US&#x11;UserInfo.TimeZone&#x6; 05:30&#x16;DeviceInfo.BrowserName&#x6;Chrome&#x19;DeviceInfo.BrowserVersion&#x9;128.0.0.0&#x11;DeviceInfo.OsName&#x7;Windows&#x14;DeviceInfo.OsVersion&#x6;15.0.0&#xd;DeviceInfo.Id$85b7b305-0da3-416b-9f5f-231b9583eae8&#x11;launcherStartTime7Fri Sep 20 2024 08:49:54 GMT 0530 (India Standard Time)&#x9;userAgentoMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36&#xb;environment&#x4;prod&#xf;launcherVersion&#x15;LauncherV2-2024072401&#x5;flags&#x9a;&#x3;{&quot;enableBranding&quot;:true,&quot;brandingWithImages&quot;:true,&quot;enableT21WebRedirect&quot;:true,&quot;lightMeetingsBuildVersion&quot;:24082621000,&quot;lightMeetingsWebBuildVersion&quot;:24091020300,&quot;enablePDSRedirect&quot;:true,&quot;enableLimeRedirectFromWebjoin&quot;:true,&quot;enableLimeRedirectForMeetingId&quot;:true,&quot;enableLimeRedirectFromUnsupportedOS&quot;:false,&quot;enableLimeRedirectForFirefox&quot;:false,&quot;enableLimeRedirectForSafari&quot;:false,&quot;enableAnonymousReporting&quot;:false}&#x11;launcherSessionId 76da11b135e4205ed4e3661e1c242a96&#x10;serverDeeplinkId$667878ea-52cc-4195-b90c-dfe2cd61f217&#xa;deeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;webDeeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;UserInfo.Ring&#x7;general&#x11;clientEnvironment&#x4;prod&#x10;EventInfo.InitId$cbe8afb1-09ba-4e01-9d9b-ae478979eb7c&#x12;EventInfo.Sequence&#x2;10&#x14;EventInfo.SdkVersion&#x10;AWT-Web-JS-1.8.6&#xe;EventInfo.Name&#x8;tracking&#xe;EventInfo.Time&#x18;2024-09-20T03:20:12.530ZÍ&#x1f;&#x9;&#x2;&#x3;&#xc;isTabVisible&#x1;&#xe;suppressPrompt&#x0;&#xd;promptSuccess&#x0;&#x0;&#x0;&#x0;" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">m	&#xb;&#x2;Ja387cfcf60114a43a7699f9fbb49289e-9bceb9fe-1c06-460f-96c5-6a0b247358bc-7238
+&#x1;I&#x12;act_default_source©$b0029ae3-1901-4ac8-b4f3-2fa071a88345Ñ&#x6;æ&#x8f;&#x8e;×ÁdË&#x8;
+&#x1;)$d5e1aacc-2d2d-4c21-bfad-8b6c573cddc6qæ&#x8f;&#x8e;×Ád©&#x6;customÉ&#x6;	awt_statsÍ&#xd;		&#x1b;&#x8;TenantId bc3902d8132f43e3ae086a009979fa88&#x16;records_received_count&#x2;11&#x12;records_sent_count&#x1;9&#x10;AppInfo.Language&#x5;en-US&#x11;UserInfo.Language&#x5;en-US&#x11;UserInfo.TimeZone&#x6; 05:30&#x16;DeviceInfo.BrowserName&#x6;Chrome&#x19;DeviceInfo.BrowserVersion	128.0.0.0&#x11;DeviceInfo.OsName&#x7;Windows&#x14;DeviceInfo.OsVersion&#x6;15.0.0&#xd;DeviceInfo.Id$85b7b305-0da3-416b-9f5f-231b9583eae8&#x11;launcherStartTime7Fri Sep 20 2024 08:49:54 GMT 0530 (India Standard Time)	userAgentoMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36&#xb;environment&#x4;prod&#xf;launcherVersion&#x15;LauncherV2-2024072401&#x5;flags&#x9a;&#x3;{&quot;enableBranding&quot;:true,&quot;brandingWithImages&quot;:true,&quot;enableT21WebRedirect&quot;:true,&quot;lightMeetingsBuildVersion&quot;:24082621000,&quot;lightMeetingsWebBuildVersion&quot;:24091020300,&quot;enablePDSRedirect&quot;:true,&quot;enableLimeRedirectFromWebjoin&quot;:true,&quot;enableLimeRedirectForMeetingId&quot;:true,&quot;enableLimeRedirectFromUnsupportedOS&quot;:false,&quot;enableLimeRedirectForFirefox&quot;:false,&quot;enableLimeRedirectForSafari&quot;:false,&quot;enableAnonymousReporting&quot;:false}&#x11;launcherSessionId 76da11b135e4205ed4e3661e1c242a96&#x10;serverDeeplinkId$667878ea-52cc-4195-b90c-dfe2cd61f217
+deeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;webDeeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;UserInfo.Ring&#x7;general&#x11;clientEnvironment&#x4;prod&#x10;EventInfo.InitId$8ffe4a6a-6bad-46fd-bff3-c8da8bd5d8f6&#x12;EventInfo.Sequence&#x1;1&#x14;EventInfo.SdkVersion&#x10;AWT-Web-JS-1.8.6&#xe;EventInfo.Name	awt_stats&#xe;EventInfo.Time&#x18;2024-09-20T03:20:12.531ZÍ&#x1f;	&#x2;&#x2;&#xe;suppressPrompt&#x0;&#xd;promptSuccess&#x0;&#x0;&#x0;Jbc3902d8132f43e3ae086a009979fa88-632130b2-9455-44a6-80e2-d7457b6eb8ca-7193
+&#x1;I&#x12;act_default_source©$23098fe0-6245-44f9-9a69-90d06d2968b1Ñ&#x6;æ&#x8f;&#x8e;×ÁdË&#x8;
+&#x2;)$54fa9289-5da7-49b8-ad59-ef57fac4eb27qæ&#x8f;&#x8e;×Ád©&#x7;sessionÉ&#x6;&#x7;sessionÍ&#xd;		&#x1d;
+Session.Id$9c0ecca1-bca6-491b-b1c5-e8f75bcee798&#xd;Session.State&#x5;Ended&#x10;Session.Duration&#x2;17&#x16;Session.DurationBucket	UpTo30Sec&#x17;Session.FirstLaunchTime&#x18;2024-04-04T12:08:55.420Z&#x10;AppInfo.Language&#x5;en-US&#x11;UserInfo.Language&#x5;en-US&#x11;UserInfo.TimeZone&#x6; 05:30&#x16;DeviceInfo.BrowserName&#x6;Chrome&#x19;DeviceInfo.BrowserVersion	128.0.0.0&#x11;DeviceInfo.OsName&#x7;Windows&#x14;DeviceInfo.OsVersion&#x6;15.0.0&#xd;DeviceInfo.Id$85b7b305-0da3-416b-9f5f-231b9583eae8&#x11;launcherStartTime7Fri Sep 20 2024 08:49:54 GMT 0530 (India Standard Time)	userAgentoMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36&#xb;environment&#x4;prod&#xf;launcherVersion&#x15;LauncherV2-2024072401&#x5;flags&#x9a;&#x3;{&quot;enableBranding&quot;:true,&quot;brandingWithImages&quot;:true,&quot;enableT21WebRedirect&quot;:true,&quot;lightMeetingsBuildVersion&quot;:24082621000,&quot;lightMeetingsWebBuildVersion&quot;:24091020300,&quot;enablePDSRedirect&quot;:true,&quot;enableLimeRedirectFromWebjoin&quot;:true,&quot;enableLimeRedirectForMeetingId&quot;:true,&quot;enableLimeRedirectFromUnsupportedOS&quot;:false,&quot;enableLimeRedirectForFirefox&quot;:false,&quot;enableLimeRedirectForSafari&quot;:false,&quot;enableAnonymousReporting&quot;:false}&#x11;launcherSessionId 76da11b135e4205ed4e3661e1c242a96&#x10;serverDeeplinkId$667878ea-52cc-4195-b90c-dfe2cd61f217
+deeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;webDeeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;UserInfo.Ring&#x7;general&#x11;clientEnvironment&#x4;prod&#x10;EventInfo.InitId$cbe8afb1-09ba-4e01-9d9b-ae478979eb7c&#x12;EventInfo.Sequence&#x2;11&#x14;EventInfo.SdkVersion&#x10;AWT-Web-JS-1.8.6&#xe;EventInfo.Name&#x7;session&#xe;EventInfo.Time&#x18;2024-09-20T03:20:12.531ZÍ&#x1f;	&#x2;&#x2;&#xe;suppressPrompt&#x0;&#xd;promptSuccess&#x0;&#x0;)$a95b242b-84a8-407d-8452-7bbbc8580d45qä&#x8f;&#x8e;×Ád©&#x8;launcherÉ&#x6;&#x8;trackingÍ&#xd;		&#x1c;
+actionName&#x16;launcher_page_unloaded&#x10;screenResolution&#x8;1536x864&#xc;deeplinkType&#x7;message
+Session.Id$9c0ecca1-bca6-491b-b1c5-e8f75bcee798&#x10;AppInfo.Language&#x5;en-US&#x11;UserInfo.Language&#x5;en-US&#x11;UserInfo.TimeZone&#x6; 05:30&#x16;DeviceInfo.BrowserName&#x6;Chrome&#x19;DeviceInfo.BrowserVersion	128.0.0.0&#x11;DeviceInfo.OsName&#x7;Windows&#x14;DeviceInfo.OsVersion&#x6;15.0.0&#xd;DeviceInfo.Id$85b7b305-0da3-416b-9f5f-231b9583eae8&#x11;launcherStartTime7Fri Sep 20 2024 08:49:54 GMT 0530 (India Standard Time)	userAgentoMozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36&#xb;environment&#x4;prod&#xf;launcherVersion&#x15;LauncherV2-2024072401&#x5;flags&#x9a;&#x3;{&quot;enableBranding&quot;:true,&quot;brandingWithImages&quot;:true,&quot;enableT21WebRedirect&quot;:true,&quot;lightMeetingsBuildVersion&quot;:24082621000,&quot;lightMeetingsWebBuildVersion&quot;:24091020300,&quot;enablePDSRedirect&quot;:true,&quot;enableLimeRedirectFromWebjoin&quot;:true,&quot;enableLimeRedirectForMeetingId&quot;:true,&quot;enableLimeRedirectFromUnsupportedOS&quot;:false,&quot;enableLimeRedirectForFirefox&quot;:false,&quot;enableLimeRedirectForSafari&quot;:false,&quot;enableAnonymousReporting&quot;:false}&#x11;launcherSessionId 76da11b135e4205ed4e3661e1c242a96&#x10;serverDeeplinkId$667878ea-52cc-4195-b90c-dfe2cd61f217
+deeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;webDeeplinkId$55bee3c2-d830-4630-9131-3d2b6a30beca&#xd;UserInfo.Ring&#x7;general&#x11;clientEnvironment&#x4;prod&#x10;EventInfo.InitId$cbe8afb1-09ba-4e01-9d9b-ae478979eb7c&#x12;EventInfo.Sequence&#x2;10&#x14;EventInfo.SdkVersion&#x10;AWT-Web-JS-1.8.6&#xe;EventInfo.Name&#x8;tracking&#xe;EventInfo.Time&#x18;2024-09-20T03:20:12.530ZÍ&#x1f;	&#x2;&#x3;&#xc;isTabVisible&#x1;&#xe;suppressPrompt&#x0;&#xd;promptSuccess&#x0;&#x0;&#x0;&#x0;</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://uat-ssppcores.pp.zebra.com/identity/token/sync-loadtest1">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">identity/token/sync-loadtest1</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">3</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">session_code</stringProp>
+              <stringProp name="RegexExtractor.regex">session_code=(.+?)&amp;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">execution</stringProp>
+              <stringProp name="RegexExtractor.regex">execution=(.+?)&amp;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">tab_id</stringProp>
+              <stringProp name="RegexExtractor.regex">;tab_id=(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">state</stringProp>
+              <stringProp name="RegexExtractor.regex">state=(.+?)&amp;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">nonce</stringProp>
+              <stringProp name="RegexExtractor.regex">nonce=(.*)</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">UTH_SESSION_ID</stringProp>
+              <stringProp name="RegexExtractor.regex">UTH_SESSION_ID=(.+?);</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">UTH_SESSION_ID_LEGACY</stringProp>
+              <stringProp name="RegexExtractor.regex">AUTH_SESSION_ID_LEGACY=(.+?);</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">C_RESTART</stringProp>
+              <stringProp name="RegexExtractor.regex">C_RESTART=(.+?);</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://uat-ssppcores.pp.zebra.com/identity/oauth2/authorization/sync-loadtest1@-@-326051123?tenant_id=sync-loadtest1">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">identity/oauth2/authorization/sync-loadtest1@-@-326051123</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="tenant_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">tenant_id</stringProp>
+                  <stringProp name="Argument.value">sync-loadtest1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">679</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">state</stringProp>
+              <stringProp name="RegexExtractor.regex">state=(.+?)&amp;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">nonce</stringProp>
+              <stringProp name="RegexExtractor.regex">nonce=(.*)</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/realms/sync-loadtest1/protocol/openid-connect/auth?response_type=code&amp;client_id=idpoidc&amp;scope=openid%20profile%20email&amp;state=egsu5cMNuHTN8BqFLvyA6MzjJ_3RXL-lsyEqLQHNB2c%3D&amp;redirect_uri=https://uat-ssppcores.pp.zebra.com/identity/login/oauth2/code/callback&amp;nonce=eN3u0pA8DwHIU7YJsS_ofRpmgu_t8FYPkInrD1dx7vI">
+            <stringProp name="HTTPSampler.domain">zac-idp1.sync.zebra.com</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">realms/sync-loadtest1/protocol/openid-connect/auth</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="scope" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">scope</stringProp>
+                  <stringProp name="Argument.value">openid profile email</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="response_type" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">response_type</stringProp>
+                  <stringProp name="Argument.value">code</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">state</stringProp>
+                  <stringProp name="Argument.value">${state}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="redirect_uri" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">redirect_uri</stringProp>
+                  <stringProp name="Argument.value">https://uat-ssppcores.pp.zebra.com/identity/login/oauth2/code/callback</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="nonce" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">nonce</stringProp>
+                  <stringProp name="Argument.value">${nonce}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="client_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">client_id</stringProp>
+                  <stringProp name="Argument.value">idpoidc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">436</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">session_code</stringProp>
+              <stringProp name="RegexExtractor.regex">session_code=(.+?)&amp;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">execution</stringProp>
+              <stringProp name="RegexExtractor.regex">execution=(.+?)&amp;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+              <stringProp name="RegexExtractor.refname">tab_id</stringProp>
+              <stringProp name="RegexExtractor.regex">;tab_id=(.+?)&quot;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">5000</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/common/keycloak/web_modules/@patternfly/react-core/dist/styles/base.css" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/common/keycloak/web_modules/@patternfly/react-core/dist/styles/base.css</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/css,*/*;q=0.1</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/common/keycloak/web_modules/@patternfly/react-core/dist/styles/app.css" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/common/keycloak/web_modules/@patternfly/react-core/dist/styles/app.css</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/css,*/*;q=0.1</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/common/keycloak/node_modules/patternfly/dist/css/patternfly.min.css" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/common/keycloak/node_modules/patternfly/dist/css/patternfly.min.css</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/css,*/*;q=0.1</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/common/keycloak/node_modules/patternfly/dist/css/patternfly-additions.min.css" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/common/keycloak/node_modules/patternfly/dist/css/patternfly-additions.min.css</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/css,*/*;q=0.1</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/common/keycloak/lib/pficon/pficon.css" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/common/keycloak/lib/pficon/pficon.css</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/css,*/*;q=0.1</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/login/keycloak/css/login.css" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/login/keycloak/css/login.css</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/css,*/*;q=0.1</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/login/keycloak/img/keycloak-bg.png" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/login/keycloak/img/keycloak-bg.png</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/common/keycloak/node_modules/patternfly/dist/fonts/OpenSans-Regular-webfont.woff2" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/common/keycloak/node_modules/patternfly/dist/fonts/OpenSans-Regular-webfont.woff2</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/common/keycloak/node_modules/patternfly/dist/fonts/OpenSans-Light-webfont.woff2" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/common/keycloak/node_modules/patternfly/dist/fonts/OpenSans-Light-webfont.woff2</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/resources/9tuys/login/keycloak/img/favicon.ico" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">resources/9tuys/login/keycloak/img/favicon.ico</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T02_Login To The Application">
+          <boolProp name="TransactionController.parent">true</boolProp>
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="false">
+            <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:14:13.571</stringProp>
+            <stringProp name="HTTPSampler.domain">idp-dev1.wfc.zebra.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/realms/sync-loadtest1/login-actions/authenticate?session_code=${session_code}&amp;execution=${execution}&amp;client_id=idpoidc&amp;tab_id=${tab_id}</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">^username=loadtestadmin&amp;password=Anewday12345^%^21&amp;credentialId=^</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager" enabled="false">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="accept-language" elementType="Header">
+                  <stringProp name="Header.name">accept-language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="^cookie" elementType="Header">
+                  <stringProp name="Header.name">^cookie</stringProp>
+                  <stringProp name="Header.value">AUTH_SESSION_ID=9f9d0d05-4e12-4a2f-b548-d72ea00eeb1c.keycloak-1-41125; AUTH_SESSION_ID_LEGACY=9f9d0d05-4e12-4a2f-b548-d72ea00eeb1c.keycloak-1-41125; KC_RESTART=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhMmZmYTgwZi1lM2Q2LTQ1YmEtYWI0ZS1hM2VmZTU0Y2VjNDAifQ.eyJjaWQiOiJpZHBvaWRjIiwicHR5Ijoib3BlbmlkLWNvbm5lY3QiLCJydXJpIjoiaHR0cHM6Ly91YXQtc3NwcGNvcmVzLnBwLnplYnJhLmNvbS9pZGVudGl0eS9sb2dpbi9vYXV0aDIvY29kZS9jYWxsYmFjayIsImFjdCI6IkFVVEhFTlRJQ0FURSIsIm5vdGVzIjp7InNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJpc3MiOiJodHRwczovL2lkcC1kZXYxLndmYy56ZWJyYS5jb20vcmVhbG1zL3N5bmMtbG9hZHRlc3QxIiwicmVzcG9uc2VfdHlwZSI6ImNvZGUiLCJyZWRpcmVjdF91cmkiOiJodHRwczovL3VhdC1zc3BwY29yZXMucHAuemVicmEuY29tL2lkZW50aXR5L2xvZ2luL29hdXRoMi9jb2RlL2NhbGxiYWNrIiwic3RhdGUiOiJ6S0RwRDJ1MlgwNGRPZUt1R09HRW1Ock9JS3dDRnQzajU1TnVqcTFFbXp3PSIsIm5vbmNlIjoieHJvMFVPcjlGZzBiQXpRci13U2kxaXBPR1ZPN0VtZUpJbElnRzVzaXMyVSJ9fQ.HuEcVBB2URBC5oLEHj8P_KldEUSUNsyx22YVJHxYH1o; _evga_fe43=^{^%^22uuid^%^22:^%^22d4115d038cdf26a3^%^22^}; _sfid_65ee=^{^%^22anonymousId^%^22:^%^22d4115d038cdf26a3^%^22^%^2C^%^22consents^%^22:^[^]^}; s_ecid=MCMID^%^7C57462483327192084921335466044183793285; AMCV_912302BE532950CA0A490D4C^%^40AdobeOrg=179643557^%^7CMCIDTS^%^7C19984^%^7CMCMID^%^7C57462483327192084921335466044183793285^%^7CMCAAMLH-1727170359^%^7C12^%^7CMCAAMB-1727170359^%^7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y^%^7CMCOPTOUT-1726572759s^%^7CNONE^%^7CMCAID^%^7CNONE^%^7CvVersion^%^7C5.5.0; s_vnum=1; OptanonAlertBoxClosed=2024-09-17T09:32:43.069Z; _fbp=fb.1.1726565563077.654308489867604910; _gcl_au=1.1.1656421620.1726565564; s_vi=^[CS^]v1^|3374A65E75D81BFD-400003E221EE77D9^[CE^]; _clck=cabwkt^%^7C2^%^7Cfp9^%^7C0^%^7C1721; adobe_is_group_info=^{^%^22number^%^22:10^%^2C^%^22group^%^22:^%^22variant^%^22^}; OptanonConsent=isGpcEnabled=0&amp;datestamp=Tue+Sep+17+2024+15^%^3A04^%^3A07+GMT^%^2B0530+(India+Standard+Time)&amp;version=6.37.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=46e80b8c-293b-4dde-aa96-95d868f60e9b&amp;interactionCount=1&amp;landingPath=NotLandingPage&amp;groups=C0001^%^3A1^%^2CC0003^%^3A1^%^2CC0002^%^3A1^%^2CC0005^%^3A1^%^2CC0004^%^3A1&amp;geolocation=IN^%^3BTS&amp;AwaitingReconsent=false; _uetvid=cb646be074d711efa5ba0990c46fa83f; _hjSessionUser_523177=eyJpZCI6ImJlNjYwZTg0LTZlNTEtNTA0YS05YWM2LWNiODQ0Yjc3NDQ0OCIsImNyZWF0ZWQiOjE3MjY1NjU1NjQ3NjksImV4aXN0aW5nIjp0cnVlfQ==; s_dslv=1726565671372; _ga_6HBKMX7V92=GS1.1.1726565647.1.1.1726565675.32.0.0; _ga=GA1.2.2142745696.1726565564; _ga_WT2VWP1ECX=GS1.1.1726565694.1.1.1726565715.0.0.0; application_id=https://pi.zebra.com/idp/LMeeT_ICHXaZKr0P/resumeSAML20/idp/SSO.ping; route=53b87290f3430d1d356e88117d86c869^|49f59c53382bf25e33f7cb9947e36f64; JSESSIONID=NWExNmMyMmEtNDg2MC00YjY5LTkxZTUtY2M1OGUzYTViMzgy^</stringProp>
+                </elementProp>
+                <elementProp name="origin" elementType="Header">
+                  <stringProp name="Header.name">origin</stringProp>
+                  <stringProp name="Header.value">null</stringProp>
+                </elementProp>
+                <elementProp name="priority" elementType="Header">
+                  <stringProp name="Header.name">priority</stringProp>
+                  <stringProp name="Header.value">u=0, i</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua" elementType="Header">
+                  <stringProp name="Header.name">^sec-ch-ua</stringProp>
+                  <stringProp name="Header.value">^\^Chromium^\^;v=^\^128^\^, ^\^Not;A=Brand^\^;v=^\^24^\^, ^\^Google</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                  <stringProp name="Header.value">?0</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua-platform" elementType="Header">
+                  <stringProp name="Header.name">^sec-ch-ua-platform</stringProp>
+                  <stringProp name="Header.value">^\^Windows^\^^</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-dest" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-mode" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-site" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-site</stringProp>
+                  <stringProp name="Header.value">same-origin</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-user" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-user</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="upgrade-insecure-requests" elementType="Header">
+                  <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="user-agent" elementType="Header">
+                  <stringProp name="Header.name">user-agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:14:13.571</stringProp>
+            </HeaderManager>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="accept-language" elementType="Header">
+                  <stringProp name="Header.name">accept-language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="^cookie" elementType="Header">
+                  <stringProp name="Header.name">cookie</stringProp>
+                  <stringProp name="Header.value">AUTH_SESSION_ID=${UTH_SESSION_ID}; AUTH_SESSION_ID_LEGACY=${UTH_SESSION_ID_LEGACY}; KC_RESTART=${C_RESTART}; _evga_fe43=^{^%^22uuid^%^22:^%^22d4115d038cdf26a3^%^22^}; _sfid_65ee=^{^%^22anonymousId^%^22:^%^22d4115d038cdf26a3^%^22^%^2C^%^22consents^%^22:^[^]^}; s_ecid=MCMID^%^7C57462483327192084921335466044183793285; AMCV_912302BE532950CA0A490D4C^%^40AdobeOrg=179643557^%^7CMCIDTS^%^7C19984^%^7CMCMID^%^7C57462483327192084921335466044183793285^%^7CMCAAMLH-1727170359^%^7C12^%^7CMCAAMB-1727170359^%^7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y^%^7CMCOPTOUT-1726572759s^%^7CNONE^%^7CMCAID^%^7CNONE^%^7CvVersion^%^7C5.5.0; s_vnum=1; OptanonAlertBoxClosed=2024-09-17T09:32:43.069Z; _fbp=fb.1.1726565563077.654308489867604910; _gcl_au=1.1.1656421620.1726565564; s_vi=^[CS^]v1^|3374A65E75D81BFD-400003E221EE77D9^[CE^]; _clck=cabwkt^%^7C2^%^7Cfp9^%^7C0^%^7C1721; adobe_is_group_info=^{^%^22number^%^22:10^%^2C^%^22group^%^22:^%^22variant^%^22^}; OptanonConsent=isGpcEnabled=0&amp;datestamp=Tue+Sep+17+2024+15^%^3A04^%^3A07+GMT^%^2B0530+(India+Standard+Time)&amp;version=6.37.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=46e80b8c-293b-4dde-aa96-95d868f60e9b&amp;interactionCount=1&amp;landingPath=NotLandingPage&amp;groups=C0001^%^3A1^%^2CC0003^%^3A1^%^2CC0002^%^3A1^%^2CC0005^%^3A1^%^2CC0004^%^3A1&amp;geolocation=IN^%^3BTS&amp;AwaitingReconsent=false; _uetvid=cb646be074d711efa5ba0990c46fa83f; _hjSessionUser_523177=eyJpZCI6ImJlNjYwZTg0LTZlNTEtNTA0YS05YWM2LWNiODQ0Yjc3NDQ0OCIsImNyZWF0ZWQiOjE3MjY1NjU1NjQ3NjksImV4aXN0aW5nIjp0cnVlfQ==; s_dslv=1726565671372; _ga_6HBKMX7V92=GS1.1.1726565647.1.1.1726565675.32.0.0; _ga=GA1.2.2142745696.1726565564; _ga_WT2VWP1ECX=GS1.1.1726565694.1.1.1726565715.0.0.0; application_id=https://pi.zebra.com/idp/LMeeT_ICHXaZKr0P/resumeSAML20/idp/SSO.ping; route=53b87290f3430d1d356e88117d86c869^|49f59c53382bf25e33f7cb9947e36f64; JSESSIONID=NWExNmMyMmEtNDg2MC00YjY5LTkxZTUtY2M1OGUzYTViMzgy^</stringProp>
+                </elementProp>
+                <elementProp name="origin" elementType="Header">
+                  <stringProp name="Header.name">origin</stringProp>
+                  <stringProp name="Header.value">null</stringProp>
+                </elementProp>
+                <elementProp name="priority" elementType="Header">
+                  <stringProp name="Header.name">priority</stringProp>
+                  <stringProp name="Header.value">u=0, i</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua</stringProp>
+                  <stringProp name="Header.value">^\^Chromium^\^;v=^\^128^\^, ^\^Not;A=Brand^\^;v=^\^24^\^, ^\^Google</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                  <stringProp name="Header.value">?0</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua-platform" elementType="Header">
+                  <stringProp name="Header.name">^sec-ch-ua-platform</stringProp>
+                  <stringProp name="Header.value">^\^Windows^\^^</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-dest" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-mode" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-site" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-site</stringProp>
+                  <stringProp name="Header.value">same-origin</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-user" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-user</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="upgrade-insecure-requests" elementType="Header">
+                  <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="user-agent" elementType="Header">
+                  <stringProp name="Header.name">user-agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">path</stringProp>
+                  <stringProp name="Header.value">/realms/sync-loadtest1/login-actions/authenticate?session_code=${session_code}&amp;execution=${execution}&amp;client_id=idpoidc&amp;tab_id=${tab_id}</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:14:13.571</stringProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/realms/sync-loadtest1/login-actions/authenticate?" enabled="true">
+            <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:14:13.571</stringProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.concurrentDwn">true</boolProp>
+            <intProp name="HTTPSampler.concurrentPool">3</intProp>
+            <stringProp name="HTTPSampler.domain">zac-idp1.sync.zebra.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/realms/sync-loadtest1/login-actions/authenticate?session_code=${session_code}&amp;execution=${execution}&amp;client_id=idpoidc&amp;tab_id=${tab_id}</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">Anewday12345!</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                </elementProp>
+                <elementProp name="credentialId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">credentialId</stringProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.value">${Uselogin}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager" enabled="false">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="accept-language" elementType="Header">
+                  <stringProp name="Header.name">accept-language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="^cookie" elementType="Header">
+                  <stringProp name="Header.name">^cookie</stringProp>
+                  <stringProp name="Header.value">AUTH_SESSION_ID=9f9d0d05-4e12-4a2f-b548-d72ea00eeb1c.keycloak-1-41125; AUTH_SESSION_ID_LEGACY=9f9d0d05-4e12-4a2f-b548-d72ea00eeb1c.keycloak-1-41125; KC_RESTART=eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhMmZmYTgwZi1lM2Q2LTQ1YmEtYWI0ZS1hM2VmZTU0Y2VjNDAifQ.eyJjaWQiOiJpZHBvaWRjIiwicHR5Ijoib3BlbmlkLWNvbm5lY3QiLCJydXJpIjoiaHR0cHM6Ly91YXQtc3NwcGNvcmVzLnBwLnplYnJhLmNvbS9pZGVudGl0eS9sb2dpbi9vYXV0aDIvY29kZS9jYWxsYmFjayIsImFjdCI6IkFVVEhFTlRJQ0FURSIsIm5vdGVzIjp7InNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJpc3MiOiJodHRwczovL2lkcC1kZXYxLndmYy56ZWJyYS5jb20vcmVhbG1zL3N5bmMtbG9hZHRlc3QxIiwicmVzcG9uc2VfdHlwZSI6ImNvZGUiLCJyZWRpcmVjdF91cmkiOiJodHRwczovL3VhdC1zc3BwY29yZXMucHAuemVicmEuY29tL2lkZW50aXR5L2xvZ2luL29hdXRoMi9jb2RlL2NhbGxiYWNrIiwic3RhdGUiOiJ6S0RwRDJ1MlgwNGRPZUt1R09HRW1Ock9JS3dDRnQzajU1TnVqcTFFbXp3PSIsIm5vbmNlIjoieHJvMFVPcjlGZzBiQXpRci13U2kxaXBPR1ZPN0VtZUpJbElnRzVzaXMyVSJ9fQ.HuEcVBB2URBC5oLEHj8P_KldEUSUNsyx22YVJHxYH1o; _evga_fe43=^{^%^22uuid^%^22:^%^22d4115d038cdf26a3^%^22^}; _sfid_65ee=^{^%^22anonymousId^%^22:^%^22d4115d038cdf26a3^%^22^%^2C^%^22consents^%^22:^[^]^}; s_ecid=MCMID^%^7C57462483327192084921335466044183793285; AMCV_912302BE532950CA0A490D4C^%^40AdobeOrg=179643557^%^7CMCIDTS^%^7C19984^%^7CMCMID^%^7C57462483327192084921335466044183793285^%^7CMCAAMLH-1727170359^%^7C12^%^7CMCAAMB-1727170359^%^7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y^%^7CMCOPTOUT-1726572759s^%^7CNONE^%^7CMCAID^%^7CNONE^%^7CvVersion^%^7C5.5.0; s_vnum=1; OptanonAlertBoxClosed=2024-09-17T09:32:43.069Z; _fbp=fb.1.1726565563077.654308489867604910; _gcl_au=1.1.1656421620.1726565564; s_vi=^[CS^]v1^|3374A65E75D81BFD-400003E221EE77D9^[CE^]; _clck=cabwkt^%^7C2^%^7Cfp9^%^7C0^%^7C1721; adobe_is_group_info=^{^%^22number^%^22:10^%^2C^%^22group^%^22:^%^22variant^%^22^}; OptanonConsent=isGpcEnabled=0&amp;datestamp=Tue+Sep+17+2024+15^%^3A04^%^3A07+GMT^%^2B0530+(India+Standard+Time)&amp;version=6.37.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=46e80b8c-293b-4dde-aa96-95d868f60e9b&amp;interactionCount=1&amp;landingPath=NotLandingPage&amp;groups=C0001^%^3A1^%^2CC0003^%^3A1^%^2CC0002^%^3A1^%^2CC0005^%^3A1^%^2CC0004^%^3A1&amp;geolocation=IN^%^3BTS&amp;AwaitingReconsent=false; _uetvid=cb646be074d711efa5ba0990c46fa83f; _hjSessionUser_523177=eyJpZCI6ImJlNjYwZTg0LTZlNTEtNTA0YS05YWM2LWNiODQ0Yjc3NDQ0OCIsImNyZWF0ZWQiOjE3MjY1NjU1NjQ3NjksImV4aXN0aW5nIjp0cnVlfQ==; s_dslv=1726565671372; _ga_6HBKMX7V92=GS1.1.1726565647.1.1.1726565675.32.0.0; _ga=GA1.2.2142745696.1726565564; _ga_WT2VWP1ECX=GS1.1.1726565694.1.1.1726565715.0.0.0; application_id=https://pi.zebra.com/idp/LMeeT_ICHXaZKr0P/resumeSAML20/idp/SSO.ping; route=53b87290f3430d1d356e88117d86c869^|49f59c53382bf25e33f7cb9947e36f64; JSESSIONID=NWExNmMyMmEtNDg2MC00YjY5LTkxZTUtY2M1OGUzYTViMzgy^</stringProp>
+                </elementProp>
+                <elementProp name="origin" elementType="Header">
+                  <stringProp name="Header.name">origin</stringProp>
+                  <stringProp name="Header.value">null</stringProp>
+                </elementProp>
+                <elementProp name="priority" elementType="Header">
+                  <stringProp name="Header.name">priority</stringProp>
+                  <stringProp name="Header.value">u=0, i</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua" elementType="Header">
+                  <stringProp name="Header.name">^sec-ch-ua</stringProp>
+                  <stringProp name="Header.value">^\^Chromium^\^;v=^\^128^\^, ^\^Not;A=Brand^\^;v=^\^24^\^, ^\^Google</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                  <stringProp name="Header.value">?0</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua-platform" elementType="Header">
+                  <stringProp name="Header.name">^sec-ch-ua-platform</stringProp>
+                  <stringProp name="Header.value">^\^Windows^\^^</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-dest" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-mode" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-site" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-site</stringProp>
+                  <stringProp name="Header.value">same-origin</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-user" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-user</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="upgrade-insecure-requests" elementType="Header">
+                  <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="user-agent" elementType="Header">
+                  <stringProp name="Header.name">user-agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:14:13.571</stringProp>
+            </HeaderManager>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="accept-language" elementType="Header">
+                  <stringProp name="Header.name">accept-language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="^cookie" elementType="Header">
+                  <stringProp name="Header.name">cookie</stringProp>
+                  <stringProp name="Header.value">AUTH_SESSION_ID=${UTH_SESSION_ID}; AUTH_SESSION_ID_LEGACY=${UTH_SESSION_ID_LEGACY}; KC_RESTART=${C_RESTART}; _evga_fe43=^{^%^22uuid^%^22:^%^22d4115d038cdf26a3^%^22^}; _sfid_65ee=^{^%^22anonymousId^%^22:^%^22d4115d038cdf26a3^%^22^%^2C^%^22consents^%^22:^[^]^}; s_ecid=MCMID^%^7C57462483327192084921335466044183793285; AMCV_912302BE532950CA0A490D4C^%^40AdobeOrg=179643557^%^7CMCIDTS^%^7C19984^%^7CMCMID^%^7C57462483327192084921335466044183793285^%^7CMCAAMLH-1727170359^%^7C12^%^7CMCAAMB-1727170359^%^7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y^%^7CMCOPTOUT-1726572759s^%^7CNONE^%^7CMCAID^%^7CNONE^%^7CvVersion^%^7C5.5.0; s_vnum=1; OptanonAlertBoxClosed=2024-09-17T09:32:43.069Z; _fbp=fb.1.1726565563077.654308489867604910; _gcl_au=1.1.1656421620.1726565564; s_vi=^[CS^]v1^|3374A65E75D81BFD-400003E221EE77D9^[CE^]; _clck=cabwkt^%^7C2^%^7Cfp9^%^7C0^%^7C1721; adobe_is_group_info=^{^%^22number^%^22:10^%^2C^%^22group^%^22:^%^22variant^%^22^}; OptanonConsent=isGpcEnabled=0&amp;datestamp=Tue+Sep+17+2024+15^%^3A04^%^3A07+GMT^%^2B0530+(India+Standard+Time)&amp;version=6.37.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=46e80b8c-293b-4dde-aa96-95d868f60e9b&amp;interactionCount=1&amp;landingPath=NotLandingPage&amp;groups=C0001^%^3A1^%^2CC0003^%^3A1^%^2CC0002^%^3A1^%^2CC0005^%^3A1^%^2CC0004^%^3A1&amp;geolocation=IN^%^3BTS&amp;AwaitingReconsent=false; _uetvid=cb646be074d711efa5ba0990c46fa83f; _hjSessionUser_523177=eyJpZCI6ImJlNjYwZTg0LTZlNTEtNTA0YS05YWM2LWNiODQ0Yjc3NDQ0OCIsImNyZWF0ZWQiOjE3MjY1NjU1NjQ3NjksImV4aXN0aW5nIjp0cnVlfQ==; s_dslv=1726565671372; _ga_6HBKMX7V92=GS1.1.1726565647.1.1.1726565675.32.0.0; _ga=GA1.2.2142745696.1726565564; _ga_WT2VWP1ECX=GS1.1.1726565694.1.1.1726565715.0.0.0; application_id=https://pi.zebra.com/idp/LMeeT_ICHXaZKr0P/resumeSAML20/idp/SSO.ping; route=53b87290f3430d1d356e88117d86c869^|49f59c53382bf25e33f7cb9947e36f64; JSESSIONID=NWExNmMyMmEtNDg2MC00YjY5LTkxZTUtY2M1OGUzYTViMzgy^</stringProp>
+                </elementProp>
+                <elementProp name="origin" elementType="Header">
+                  <stringProp name="Header.name">origin</stringProp>
+                  <stringProp name="Header.value">null</stringProp>
+                </elementProp>
+                <elementProp name="priority" elementType="Header">
+                  <stringProp name="Header.name">priority</stringProp>
+                  <stringProp name="Header.value">u=0, i</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua</stringProp>
+                  <stringProp name="Header.value">^\^Chromium^\^;v=^\^128^\^, ^\^Not;A=Brand^\^;v=^\^24^\^, ^\^Google</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                  <stringProp name="Header.value">?0</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua-platform" elementType="Header">
+                  <stringProp name="Header.name">^sec-ch-ua-platform</stringProp>
+                  <stringProp name="Header.value">^\^Windows^\^^</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-dest" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-mode" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-site" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-site</stringProp>
+                  <stringProp name="Header.value">same-origin</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-user" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-user</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="upgrade-insecure-requests" elementType="Header">
+                  <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="user-agent" elementType="Header">
+                  <stringProp name="Header.name">user-agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">path</stringProp>
+                  <stringProp name="Header.value">/realms/sync-loadtest1/login-actions/authenticate?session_code=${session_code}&amp;execution=${execution}&amp;client_id=idpoidc&amp;tab_id=${tab_id}</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:14:13.571</stringProp>
+            </HeaderManager>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">state2</stringProp>
+              <stringProp name="RegexExtractor.regex">state=(.+?)%3D&amp;</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+              <stringProp name="RegexExtractor.refname">code</stringProp>
+              <stringProp name="RegexExtractor.regex">code=(.*)</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default"></stringProp>
+              <boolProp name="RegexExtractor.default_empty_value">false</boolProp>
+              <stringProp name="RegexExtractor.match_number">1</stringProp>
+              <stringProp name="Sample.scope">all</stringProp>
+            </RegexExtractor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/realms/sync-loadtest1/login-actions/authenticate?session_code=Ihb1fB41-rbRRJkAoLbOZGQCiLtF0ITHdV-M7drvrr8&amp;execution=42d1525c-4b1c-4bb9-be5e-55528f89f5b7&amp;client_id=idpoidc&amp;tab_id=3Yj2YiLwrME" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">realms/sync-loadtest1/login-actions/authenticate</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="execution" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">execution</stringProp>
+                  <stringProp name="Argument.value">${execution}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="tab_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">tab_id</stringProp>
+                  <stringProp name="Argument.value">${tab_id}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="session_code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">session_code</stringProp>
+                  <stringProp name="Argument.value">${session_code}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="client_id" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">client_id</stringProp>
+                  <stringProp name="Argument.value">idpoidc</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="password" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">password</stringProp>
+                  <stringProp name="Argument.value">Anewday12345!</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="credentialId" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">credentialId</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="username" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">username</stringProp>
+                  <stringProp name="Argument.value">loadtestadmin</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="false">
+              <collectionProp name="HeaderManager.headers"/>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">16166</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="accept-language" elementType="Header">
+                  <stringProp name="Header.name">accept-language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="content-type" elementType="Header">
+                  <stringProp name="Header.name">content-type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="^cookie" elementType="Header">
+                  <stringProp name="Header.name">^cookie</stringProp>
+                  <stringProp name="Header.value">AUTH_SESSION_ID=${UTH_SESSION_ID}; AUTH_SESSION_ID_LEGACY=${UTH_SESSION_ID_LEGACY}; KC_RESTART=${C_RESTART}; _evga_fe43=^{^%^22uuid^%^22:^%^22d4115d038cdf26a3^%^22^}; _sfid_65ee=^{^%^22anonymousId^%^22:^%^22d4115d038cdf26a3^%^22^%^2C^%^22consents^%^22:^[^]^}; s_ecid=MCMID^%^7C57462483327192084921335466044183793285; AMCV_912302BE532950CA0A490D4C^%^40AdobeOrg=179643557^%^7CMCIDTS^%^7C19984^%^7CMCMID^%^7C57462483327192084921335466044183793285^%^7CMCAAMLH-1727170359^%^7C12^%^7CMCAAMB-1727170359^%^7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y^%^7CMCOPTOUT-1726572759s^%^7CNONE^%^7CMCAID^%^7CNONE^%^7CvVersion^%^7C5.5.0; s_vnum=1; OptanonAlertBoxClosed=2024-09-17T09:32:43.069Z; _fbp=fb.1.1726565563077.654308489867604910; _gcl_au=1.1.1656421620.1726565564; s_vi=^[CS^]v1^|3374A65E75D81BFD-400003E221EE77D9^[CE^]; _clck=cabwkt^%^7C2^%^7Cfp9^%^7C0^%^7C1721; adobe_is_group_info=^{^%^22number^%^22:10^%^2C^%^22group^%^22:^%^22variant^%^22^}; OptanonConsent=isGpcEnabled=0&amp;datestamp=Tue+Sep+17+2024+15^%^3A04^%^3A07+GMT^%^2B0530+(India+Standard+Time)&amp;version=6.37.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=46e80b8c-293b-4dde-aa96-95d868f60e9b&amp;interactionCount=1&amp;landingPath=NotLandingPage&amp;groups=C0001^%^3A1^%^2CC0003^%^3A1^%^2CC0002^%^3A1^%^2CC0005^%^3A1^%^2CC0004^%^3A1&amp;geolocation=IN^%^3BTS&amp;AwaitingReconsent=false; _uetvid=cb646be074d711efa5ba0990c46fa83f; _hjSessionUser_523177=eyJpZCI6ImJlNjYwZTg0LTZlNTEtNTA0YS05YWM2LWNiODQ0Yjc3NDQ0OCIsImNyZWF0ZWQiOjE3MjY1NjU1NjQ3NjksImV4aXN0aW5nIjp0cnVlfQ==; s_dslv=1726565671372; _ga_6HBKMX7V92=GS1.1.1726565647.1.1.1726565675.32.0.0; _ga=GA1.2.2142745696.1726565564; _ga_WT2VWP1ECX=GS1.1.1726565694.1.1.1726565715.0.0.0; application_id=https://pi.zebra.com/idp/LMeeT_ICHXaZKr0P/resumeSAML20/idp/SSO.ping; route=53b87290f3430d1d356e88117d86c869^|49f59c53382bf25e33f7cb9947e36f64; JSESSIONID=NWExNmMyMmEtNDg2MC00YjY5LTkxZTUtY2M1OGUzYTViMzgy^</stringProp>
+                </elementProp>
+                <elementProp name="origin" elementType="Header">
+                  <stringProp name="Header.name">origin</stringProp>
+                  <stringProp name="Header.value">null</stringProp>
+                </elementProp>
+                <elementProp name="priority" elementType="Header">
+                  <stringProp name="Header.name">priority</stringProp>
+                  <stringProp name="Header.value">u=0, i</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua" elementType="Header">
+                  <stringProp name="Header.name">^sec-ch-ua</stringProp>
+                  <stringProp name="Header.value">^\^Chromium^\^;v=^\^128^\^, ^\^Not;A=Brand^\^;v=^\^24^\^, ^\^Google</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                  <stringProp name="Header.value">?0</stringProp>
+                </elementProp>
+                <elementProp name="^sec-ch-ua-platform" elementType="Header">
+                  <stringProp name="Header.name">^sec-ch-ua-platform</stringProp>
+                  <stringProp name="Header.value">^\^Windows^\^^</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-dest" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-mode" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-site" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-site</stringProp>
+                  <stringProp name="Header.value">same-origin</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-user" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-user</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="upgrade-insecure-requests" elementType="Header">
+                  <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="user-agent" elementType="Header">
+                  <stringProp name="Header.name">user-agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:14:13.571</stringProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://uat-ssppcores.pp.zebra.com/identity/login/oauth2/code/callback?state=egsu5cMNuHTN8BqFLvyA6MzjJ_3RXL-lsyEqLQHNB2c%3D&amp;code=db9aa6f8-6615-4093-be9e-93acb1feb269.0f5d4d10-8e9f-4e7f-8284-6b60ad359710.220121a0-891f-4074-8976-f42de16e4dd3" enabled="false">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">identity/login/oauth2/code/callback</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">code</stringProp>
+                  <stringProp name="Argument.value">${code}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">state</stringProp>
+                  <stringProp name="Argument.value">${state2}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">587</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request" enabled="false">
+            <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:38:13.943</stringProp>
+            <stringProp name="HTTPSampler.domain">uat-ssppcores.pp.zebra.com</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">/identity/login/oauth2/code/callback</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="state" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">state</stringProp>
+                  <stringProp name="Argument.value">${state2}=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="code" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">code</stringProp>
+                  <stringProp name="Argument.value">${code}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="accept" elementType="Header">
+                  <stringProp name="Header.name">accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+                <elementProp name="accept-language" elementType="Header">
+                  <stringProp name="Header.name">accept-language</stringProp>
+                  <stringProp name="Header.value">en-US,en;q=0.9</stringProp>
+                </elementProp>
+                <elementProp name="cache-control" elementType="Header">
+                  <stringProp name="Header.name">cache-control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="priority" elementType="Header">
+                  <stringProp name="Header.name">priority</stringProp>
+                  <stringProp name="Header.value">u=0, i</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua</stringProp>
+                  <stringProp name="Header.value">&quot;Chromium&quot;;v=&quot;128&quot;, &quot;Not;A=Brand&quot;;v=&quot;24&quot;, &quot;Google Chrome&quot;;v=&quot;128&quot;</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-mobile" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
+                  <stringProp name="Header.value">?0</stringProp>
+                </elementProp>
+                <elementProp name="sec-ch-ua-platform" elementType="Header">
+                  <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
+                  <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-dest" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-dest</stringProp>
+                  <stringProp name="Header.value">document</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-mode" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-mode</stringProp>
+                  <stringProp name="Header.value">navigate</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-site" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-site</stringProp>
+                  <stringProp name="Header.value">same-site</stringProp>
+                </elementProp>
+                <elementProp name="sec-fetch-user" elementType="Header">
+                  <stringProp name="Header.name">sec-fetch-user</stringProp>
+                  <stringProp name="Header.value">?1</stringProp>
+                </elementProp>
+                <elementProp name="upgrade-insecure-requests" elementType="Header">
+                  <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="user-agent" elementType="Header">
+                  <stringProp name="Header.name">user-agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">path</stringProp>
+                  <stringProp name="Header.value">/identity/login/oauth2/code/callback?state=${state2}=&amp;code=${code}</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">cookie</stringProp>
+                  <stringProp name="Header.value">_evga_fe43={%22uuid%22:%22d4115d038cdf26a3%22}; _sfid_65ee={%22anonymousId%22:%22d4115d038cdf26a3%22%2C%22consents%22:[]}; s_ecid=MCMID%7C57462483327192084921335466044183793285; AMCV_912302BE532950CA0A490D4C%40AdobeOrg=179643557%7CMCIDTS%7C19984%7CMCMID%7C57462483327192084921335466044183793285%7CMCAAMLH-1727170359%7C12%7CMCAAMB-1727170359%7CRKhpRz8krg2tLO6pguXWp5olkAcUniQYPHaMWWgdJ3xzPWQmdj0y%7CMCOPTOUT-1726572759s%7CNONE%7CMCAID%7CNONE%7CvVersion%7C5.5.0; s_vnum=1; OptanonAlertBoxClosed=2024-09-17T09:32:43.069Z; _fbp=fb.1.1726565563077.654308489867604910; _gcl_au=1.1.1656421620.1726565564; s_vi=[CS]v1|3374A65E75D81BFD-400003E221EE77D9[CE]; _clck=cabwkt%7C2%7Cfp9%7C0%7C1721; adobe_is_group_info={%22number%22:10%2C%22group%22:%22variant%22}; OptanonConsent=isGpcEnabled=0&amp;datestamp=Tue+Sep+17+2024+15%3A04%3A07+GMT%2B0530+(India+Standard+Time)&amp;version=6.37.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=46e80b8c-293b-4dde-aa96-95d868f60e9b&amp;interactionCount=1&amp;landingPath=NotLandingPage&amp;groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1%2CC0005%3A1%2CC0004%3A1&amp;geolocation=IN%3BTS&amp;AwaitingReconsent=false; _uetvid=cb646be074d711efa5ba0990c46fa83f; _hjSessionUser_523177=eyJpZCI6ImJlNjYwZTg0LTZlNTEtNTA0YS05YWM2LWNiODQ0Yjc3NDQ0OCIsImNyZWF0ZWQiOjE3MjY1NjU1NjQ3NjksImV4aXN0aW5nIjp0cnVlfQ==; s_dslv=1726565671372; _ga_6HBKMX7V92=GS1.1.1726565647.1.1.1726565675.32.0.0; _ga=GA1.2.2142745696.1726565564; _ga_WT2VWP1ECX=GS1.1.1726565694.1.1.1726565715.0.0.0; application_id=https://pi.zebra.com/idp/LMeeT_ICHXaZKr0P/resumeSAML20/idp/SSO.ping; SESSION=&quot;0441b5acd0a8d451&quot;; GCLB=CMO2tMHz-omHrgEQAw; JSESSIONID=NWExNmMyMmEtNDg2MC00YjY5LTkxZTUtY2M1OGUzYTViMzgy</stringProp>
+                </elementProp>
+              </collectionProp>
+              <stringProp name="TestPlan.comments">Created from cURL on 2024-09-20T09:38:13.943</stringProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://uat-ssppcores.pp.zebra.com/identity/login/success">
+            <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+            <stringProp name="HTTPSampler.port">0</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.path">identity/login/success</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">514</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+              <stringProp name="ConstantTimer.delay">5000</stringProp>
+            </ConstantTimer>
+            <hashTree/>
+            <ConstantThroughputTimer guiclass="TestBeanGUI" testclass="ConstantThroughputTimer" testname="Constant Throughput Timer">
+              <intProp name="calcMode">1</intProp>
+              <doubleProp>
+                <name>throughput</name>
+                <value>6.0</value>
+                <savedValue>0.0</savedValue>
+              </doubleProp>
+            </ConstantThroughputTimer>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <RunTime guiclass="RunTimeGui" testclass="RunTime" testname="Runtime Controller" enabled="false">
+          <stringProp name="RunTime.seconds">900</stringProp>
+        </RunTime>
+        <hashTree/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="false"/>
+        <hashTree>
+          <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="T03_Logout">
+            <boolProp name="TransactionController.parent">true</boolProp>
+            <boolProp name="TransactionController.includeTimers">false</boolProp>
+          </TransactionController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://uat-ssppcores.pp.zebra.com/identity/logout" enabled="true">
+              <stringProp name="HTTPSampler.domain">${BASE_URL_2}</stringProp>
+              <stringProp name="HTTPSampler.port">0</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">identity/logout</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                    <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+                <stringProp name="ConstantTimer.delay">12453</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="https://idp-dev1.wfc.zebra.com/realms/sync-loadtest1/protocol/openid-connect/logout?id_token_hint=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJfRUVHSjNSNWdfcUNCaEM5ZkhqSHczZVZYb0dHMW9nZHdiLTZIMXdhX1NZIn0.eyJleHAiOjE3MjY4ODg4MzMsImlhdCI6MTcyNjgwMjQzMywiYXV0aF90aW1lIjoxNzI2ODAyNDMyLCJqdGkiOiIwNWQ4MDBkMy1hYzUwLTRiYTItYTk5My0yNWQyNjhkYjIwNTkiLCJpc3MiOiJodHRwczovL2lkcC1kZXYxLndmYy56ZWJyYS5jb20vcmVhbG1zL3N5bmMtbG9hZHRlc3QxIiwiYXVkIjoiaWRwb2lkYyIsInN1YiI6IjZiMmU1NTkzLTE0OTgtNDg5NS1hOTY3LTFiZjJhYjNjYzEyNCIsInR5cCI6IklEIiwiYXpwIjoiaWRwb2lkYyIsIm5vbmNlIjoiZU4zdTBwQThEd0hJVTdZSnNTX29mUnBtZ3VfdDhGWVBrSW5yRDFkeDd2SSIsInNlc3Npb25fc3RhdGUiOiIwZjVkNGQxMC04ZTlmLTRlN2YtODI4NC02YjYwYWQzNTk3MTAiLCJhdF9oYXNoIjoiTWtMeVRrZkN3UzJhNHZpeWRCbmlxZyIsImFjciI6IjEiLCJzaWQiOiIwZjVkNGQxMC04ZTlmLTRlN2YtODI4NC02YjYwYWQzNTk3MTAiLCJ1bmlxdWVfbmFtZSI6ImxvYWR0ZXN0YWRtaW4iLCJ1cG4iOiJsb2FkdGVzdGFkbWluQHplYnJhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6ImxvYWR0ZXN0IGFkbWluIiwicHJlZmVycmVkX3VzZXJuYW1lIjoibG9hZHRlc3RhZG1pbiIsImdpdmVuX25hbWUiOiJsb2FkdGVzdCIsImZhbWlseV9uYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImxvYWR0ZXN0YWRtaW5AemVicmEuY29tIn0.gxDI6yiw3VlYbLpKkbpgm0Vugk0NEQ-h9s7rFLKvQqH878lnl3pLXMuw4-uwQq9V5u5oEKL8STejlAHwh0QZ2QB41DptR875B9CFgzEkoE-SQj_GtU6qQp9oUrWxEiKnMgaV64rpqHXq2NJd3k4IYAIDLDKfmOhYPgw6DyvoBmJlDOC09mguZ6AVAQZDtTt9d5H1RznUwooWvBC0-DbyO6LNsxKw6LKi_odtMwyq_86AV61-ok7Ak8OQIvh4tU1Tau3q-rsv5qSgG2Qj2xK93ZdO7BtUDxu_ewINIf1qa5KlEP5gVSgD4-QWVaSVPgiS7YhXwA7Kax5z6yGU8pWU1Q" enabled="true">
+              <stringProp name="HTTPSampler.domain">${BASE_URL_3}</stringProp>
+              <stringProp name="HTTPSampler.port">0</stringProp>
+              <stringProp name="HTTPSampler.protocol">https</stringProp>
+              <stringProp name="HTTPSampler.path">realms/sync-loadtest1/protocol/openid-connect/logout</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+                <collectionProp name="Arguments.arguments">
+                  <elementProp name="id_token_hint" elementType="HTTPArgument">
+                    <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                    <stringProp name="Argument.name">id_token_hint</stringProp>
+                    <stringProp name="Argument.value">eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJfRUVHSjNSNWdfcUNCaEM5ZkhqSHczZVZYb0dHMW9nZHdiLTZIMXdhX1NZIn0.eyJleHAiOjE3MjY4ODg4MzMsImlhdCI6MTcyNjgwMjQzMywiYXV0aF90aW1lIjoxNzI2ODAyNDMyLCJqdGkiOiIwNWQ4MDBkMy1hYzUwLTRiYTItYTk5My0yNWQyNjhkYjIwNTkiLCJpc3MiOiJodHRwczovL2lkcC1kZXYxLndmYy56ZWJyYS5jb20vcmVhbG1zL3N5bmMtbG9hZHRlc3QxIiwiYXVkIjoiaWRwb2lkYyIsInN1YiI6IjZiMmU1NTkzLTE0OTgtNDg5NS1hOTY3LTFiZjJhYjNjYzEyNCIsInR5cCI6IklEIiwiYXpwIjoiaWRwb2lkYyIsIm5vbmNlIjoiZU4zdTBwQThEd0hJVTdZSnNTX29mUnBtZ3VfdDhGWVBrSW5yRDFkeDd2SSIsInNlc3Npb25fc3RhdGUiOiIwZjVkNGQxMC04ZTlmLTRlN2YtODI4NC02YjYwYWQzNTk3MTAiLCJhdF9oYXNoIjoiTWtMeVRrZkN3UzJhNHZpeWRCbmlxZyIsImFjciI6IjEiLCJzaWQiOiIwZjVkNGQxMC04ZTlmLTRlN2YtODI4NC02YjYwYWQzNTk3MTAiLCJ1bmlxdWVfbmFtZSI6ImxvYWR0ZXN0YWRtaW4iLCJ1cG4iOiJsb2FkdGVzdGFkbWluQHplYnJhLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6ImxvYWR0ZXN0IGFkbWluIiwicHJlZmVycmVkX3VzZXJuYW1lIjoibG9hZHRlc3RhZG1pbiIsImdpdmVuX25hbWUiOiJsb2FkdGVzdCIsImZhbWlseV9uYW1lIjoiYWRtaW4iLCJlbWFpbCI6ImxvYWR0ZXN0YWRtaW5AemVicmEuY29tIn0.gxDI6yiw3VlYbLpKkbpgm0Vugk0NEQ-h9s7rFLKvQqH878lnl3pLXMuw4-uwQq9V5u5oEKL8STejlAHwh0QZ2QB41DptR875B9CFgzEkoE-SQj_GtU6qQp9oUrWxEiKnMgaV64rpqHXq2NJd3k4IYAIDLDKfmOhYPgw6DyvoBmJlDOC09mguZ6AVAQZDtTt9d5H1RznUwooWvBC0-DbyO6LNsxKw6LKi_odtMwyq_86AV61-ok7Ak8OQIvh4tU1Tau3q-rsv5qSgG2Qj2xK93ZdO7BtUDxu_ewINIf1qa5KlEP5gVSgD4-QWVaSVPgiS7YhXwA7Kax5z6yGU8pWU1Q</stringProp>
+                    <stringProp name="Argument.metadata">=</stringProp>
+                    <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  </elementProp>
+                </collectionProp>
+              </elementProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header manager" enabled="true">
+                <collectionProp name="HeaderManager.headers">
+                  <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                    <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                    <stringProp name="Header.value">1</stringProp>
+                  </elementProp>
+                  <elementProp name="Accept" elementType="Header">
+                    <stringProp name="Header.name">Accept</stringProp>
+                    <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
+                  </elementProp>
+                </collectionProp>
+              </HeaderManager>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+                <stringProp name="ConstantTimer.delay">643</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+              <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="false">
+                <stringProp name="ConstantTimer.delay">5000</stringProp>
+              </ConstantTimer>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="TestPlan.comments">//uat-ssppcores.pp.zebra.com/identity/login/oauth2/code/callback?state=aZ7sg2kfaYjDEPQHul9lj1ztii-I5QGoZpOzCP6Hbd4%3D&amp;code=5e273ffb-8714-48e4-92aa-031c7309043b.91e05d8f-f6f1-4989-9bf5-cdb9b07ab5a9.220121a0-891f-4074-8976-f42de16e4dd3</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
